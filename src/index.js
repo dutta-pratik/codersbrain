@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App';
+
+import * as firebase from "firebase";
+import "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDOOqE1tvQZbi0wXS7W6PznB3utaaqnQtE",
+  authDomain: "catalogue-fd0aa.firebaseapp.com",
+  databaseURL: "https://catalogue-fd0aa.firebaseio.com",
+  projectId: "catalogue-fd0aa",
+  storageBucket: "catalogue-fd0aa.appspot.com",
+  messagingSenderId: "376443964756",
+  appId: "1:376443964756:web:791ddbe3df3ada35db8cc1"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +26,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

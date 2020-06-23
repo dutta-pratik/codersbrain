@@ -1,38 +1,190 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  height: 50px;
+  background-color: rgb(34, 34, 121);
+  box-shadow: -1px 1px 7px rgb(168, 168, 168), 3px 3px 7px rgb(206, 206, 206);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tabs{
+  margin-top: 30px;
+  margin-left: 230px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 7px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-tab{
+  padding: 7px;
+  margin: 0px 0px 1px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-tab > button,
+.category-tab > button{
+  /* width: 80px; */
+  height: 30px;
+  background: none;
+  border: none;
+  font-weight: 400;
+  font-size: medium;
+  cursor: pointer;
+  
+}
+
+.user-tab > button:focus,
+.category-tab > button:focus{
+  outline: none;
+}
+
+.user-tab:hover,
+.category-tab:hover{
+  border-bottom: 1px solid rgb(34, 34, 121);
+}
+
+.category-tab{
+  padding: 7px;
+  /* margin: 0px 0px 1px 10px; */
+  transition: all 0.3s ease-in-out;
+}
+
+.user-container{
+  border: 1px solid green;
+  margin: 0px 10px;
+  padding: 5px;
+  height: 480px;
+  width: 60%;
+  
+  background-color: rgb(34, 34, 121);
+  display: flex;
+  margin: auto;
+}
+
+.user-sidebar{
+  /* border: 1px solid white; */
+  margin: 5px;
+  padding: 10px;
+  height: 370px;
+  width: 150px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(41, 41, 138);
+  box-shadow: -1px 1px 7px rgb(31, 31, 112), 3px 3px 7px rgb(28, 28, 114);
+}
+
+.user-display{
+  height: 95%;
+  width: 95%;
+  /* border: 1px solid white; */
+  background-color: rgb(37, 37, 134);
+  margin: 7px;
+  box-shadow: -1px 1px 7px rgb(31, 31, 112), 3px 3px 7px rgb(28, 28, 114);
+}
+
+.btn-user{
+  padding: 5px;
+  margin: 7px;
+  font-weight: 200;
+  background: none;
+  border: 1px solid white;
   color: white;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.heading{
+  font-size: x-large;
+  margin: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cu-container{
+  color: white;
+  font-size: medium;
+  font-weight: 300;
+}
+
+.cu-details{
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 300px;
+  width: 60%;
+  margin: auto;
+  margin-top: 35px;
+  justify-content: space-evenly;
+}
+
+.cu-input{
+  height: 25px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.cu-del-btn{
+  width: 55%;
+  height: 25px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-weight: 300;
+  font-size: medium;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.cu-btn{
+  width: 85%;
+  height: 30px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-weight: 300;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.edit-user{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.field{
+  margin: 5px;
+  padding: 3px;
+  /* width: 50px; */
+}
+
+.active-tab{
+  border-bottom: 1px solid rgb(48, 48, 126);
+}
+
+.category-container{
+  /* border: 1px solid red; */
+  margin: 0px 10px;
+  padding: 5px;
+  height: 480px;
+  background-color: rgb(34, 34, 121);
+  display: flex;
+}
+
+.category-sidebar{
+  /* border: 1px solid white; */
+  margin: 5px;
+  padding: 10px;
+  height: 370px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(41, 41, 138);
+  box-shadow: -1px 1px 7px rgb(31, 31, 112), 3px 3px 7px rgb(28, 28, 114);
 }
