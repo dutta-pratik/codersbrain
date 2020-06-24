@@ -10,7 +10,11 @@ const SearchUser = (props) => {
             <hr/>
             <div className="cu-details">
                 <form onSubmit={handleSearchUser}>
-                    <input className="field" type="text" placeholder="Enter Email" name="search" />
+                    <select>
+                        <option value="email">Email</option>
+                        <option value="name">Name</option>
+                    </select>
+                    <input className="field" type="text" placeholder="Enter your data" name="search" />
                     <input className="cu-del-btn" type="submit" value="search" />
                 </form>
                 

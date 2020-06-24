@@ -98,14 +98,33 @@ class User extends React.Component {
         console.log("search");
         console.log(e.target[0].value);
         const {users} = this.state;
-        const filterUser = users.filter((ele) => {
-            return ele.email ==  e.target[0].value
-        });
-        console.log("fa",filterUser);
-        this.setState({
-            ...this.state,
-            searchedusers: filterUser
-        });
+        if(e.target[0].value == "name"){
+            const filterUser = users.filter((ele) => {
+                return ele.name ==  e.target[1].value
+            });
+            console.log("fa",filterUser);
+            this.setState({
+                ...this.state,
+                searchedusers: filterUser
+            });
+        }else{
+            const filterUser = users.filter((ele) => {
+                return ele.email ==  e.target[1].value
+            });
+            console.log("fa",filterUser);
+            this.setState({
+                ...this.state,
+                searchedusers: filterUser
+            });
+        }
+        // const filterUser = users.filter((ele) => {
+        //     return ele.email ==  e.target[0].value
+        // });
+        // console.log("fa",filterUser);
+        // this.setState({
+        //     ...this.state,
+        //     searchedusers: filterUser
+        // });
     }
 
     handleDownload = () => {
